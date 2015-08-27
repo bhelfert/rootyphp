@@ -44,10 +44,10 @@ To generate the example table listed in Rootyphp's task description, just type i
 You will then see an output similar to:
 ```
 Tilgungsplan für
-* Darlehensbetrag:    100.000,00 €
-* Sollzins:           1,58%
-* Anfängliche Tilung: 2%
-* Zinsbindung:        10 Jahre
+* Darlehensbetrag:     100.000,00 €
+* Sollzins:            1,58%
+* Anfängliche Tilgung: 2%
+* Zinsbindung:         10 Jahre
 
 +------------------+---------------+-------------+------------------------------+---------------+
 |       Datum      |   Restschuld  |    Zinsen   | Tilgung (+) / Auszahlung (-) |      Rate     |

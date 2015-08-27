@@ -28,10 +28,10 @@ class AmortizationTableConsolePrinter {
         AmortizationTableLine firstTableLine = amortizationTableLinesToPrint.first()
         println """
 Tilgungsplan für
-* Darlehensbetrag:    ${asEuro(firstTableLine.loanAmountInEuro)}
-* Sollzins:           ${asPercent(firstTableLine.debitInterestFactor)}
-* Anfängliche Tilung: ${asPercent(firstTableLine.initialAmortizationFactor)}
-* Zinsbindung:        ${asYears(firstTableLine.fixedInterestRateInYears)}
+* Darlehensbetrag:     ${asEuro(firstTableLine.loanAmountInEuro)}
+* Sollzins:            ${asPercent(firstTableLine.debitInterestFactor)}
+* Anfängliche Tilgung: ${asPercent(firstTableLine.initialAmortizationFactor)}
+* Zinsbindung:         ${asYears(firstTableLine.fixedInterestRateInYears)}
 """
     }
 

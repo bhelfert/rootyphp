@@ -29,10 +29,10 @@ class EndToEndTest extends Specification {
         def outputAsString = output.toString()
         outputAsString.contains("""
 Tilgungsplan für
-* Darlehensbetrag:    200.000,00 €
-* Sollzins:           1,43%
-* Anfängliche Tilung: 2,5%
-* Zinsbindung:        15 Jahre
+* Darlehensbetrag:     200.000,00 €
+* Sollzins:            1,43%
+* Anfängliche Tilgung: 2,5%
+* Zinsbindung:         15 Jahre
 
 +------------------+---------------+-------------+------------------------------+---------------+
 |       Datum      |   Restschuld  |    Zinsen   | Tilgung (+) / Auszahlung (-) |      Rate     |
