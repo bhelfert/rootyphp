@@ -145,6 +145,7 @@ As I am not familiar with the terminology, I provide here the one I have used:
 * Tilgungsplan               = amortization table
 * Unterperiodischer Zinssatz = underperiodic interest
 * Zinsbindung                = fixed interest rate
+* Zinsbindungsende	     = end of fixed interest rate
 * Zinsen                     = interest
 
 Project statistics
