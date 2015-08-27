@@ -24,7 +24,17 @@ If you have any questions please do not hesitate to contact me via <sevenlist@we
 
 How to run/use the application
 ------------------------------
-*Precondition*: Make sure you have [Java SE 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed.
+
+### Preconditions
+1. Make sure you have [Java SE 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed.
+2. Make sure you have a locally installed distribution under:
+```
+./build/install/amortizationTableCalculator
+```
+If there is none, create it by running:
+```
+./gradlew clean installDist
+```
 
 ### Quick run with example data
 To generate the example table listed in Rootyphp's task description, just type into your command line:
