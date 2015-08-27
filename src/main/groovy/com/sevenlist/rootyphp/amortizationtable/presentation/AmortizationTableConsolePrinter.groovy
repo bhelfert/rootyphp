@@ -15,7 +15,6 @@ class AmortizationTableConsolePrinter {
     private static final DateTimeFormatter YEAR_ONLY_FORMAT = DateTimeFormatter.ofPattern('y')
 
     private AmortizationTableOutputPreparer outputPreparer = new AmortizationTableOutputPreparer()
-
     private List amortizationTableLinesToPrint
 
     void printAmortizationTable(List amortizationTableLines) {

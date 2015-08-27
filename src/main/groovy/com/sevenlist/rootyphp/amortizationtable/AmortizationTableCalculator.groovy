@@ -9,9 +9,7 @@ import groovy.transform.ToString
 class AmortizationTableCalculator {
 
     private CommandLineParser commandLineParser = new CommandLineParser()
-
     private AmortizationTable amortizationTable = new AmortizationTable()
-
     private AmortizationTableConsolePrinter amortizationTableConsolePrinter = new AmortizationTableConsolePrinter()
 
     static main(args) {

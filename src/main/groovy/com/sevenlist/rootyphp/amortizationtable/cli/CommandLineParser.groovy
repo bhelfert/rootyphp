@@ -16,7 +16,6 @@ class CommandLineParser {
     private static final int EXAMPLE_FIXED_INTEREST_RATE = 10
 
     private CliBuilder cliBuilder = new CliBuilder(usage: 'amortizationTableCalculator', width: 120)
-
     private boolean cliDefined = false
 
     AmortizationTableParameters parseCommandLine(String[] args) {
