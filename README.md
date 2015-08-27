@@ -26,7 +26,8 @@ How to run/use the application
 ------------------------------
 
 ### Preconditions
-1. Make sure you have [Java SE 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installed.
+1. Make sure your JAVA_HOME environment variable points to your
+[Java SE 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installation.
 2. Make sure you have a locally installed distribution under:
 ```
 ./build/install/amortizationTableCalculator
@@ -35,6 +36,8 @@ If there is none, create it by running:
 ```
 ./gradlew clean installDist
 ```
+If your build fails with "unable to resolve class java.time.LocalDate" errors, your JAVA_HOME environment variable does
+not point to your Java SE 8 installation.
 
 ### Quick run with example data
 To generate the example table listed in Rootyphp's task description, just type into your command line:
