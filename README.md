@@ -1,5 +1,15 @@
 Amortization Table Calculator for Rootyphp
 ==========================================
+  - [About this project](#about-this-project)
+  - [How to run/use the application](#how-to-runuse-the-application)
+    - [Preconditions](#preconditions)
+    - [Quick run with example data](#quick-run-with-example-data)
+    - [Usage](#usage)
+    - [Example](#example)
+  - [How to build the project or a distribution](#how-to-build-the-project-or-a-distribution)
+  - [Terminology / Vocabulary](#terminology--vocabulary)
+  - [Project statistics](#project-statistics)
+  - [Project dependencies](#project-dependencies)
 
 About this project
 ------------------
