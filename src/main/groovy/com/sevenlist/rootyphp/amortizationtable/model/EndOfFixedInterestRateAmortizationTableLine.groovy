@@ -9,7 +9,7 @@ import java.time.LocalDate
  * all of the other values summed up.
  */
 @ToString(includeSuper = true)
-class EndOfFixedInterestRateAmortizationTableLine extends YearlyAmortizationTableLine {
+class EndOfFixedInterestRateAmortizationTableLine extends SummatingAmortizationTableLine {
 
     EndOfFixedInterestRateAmortizationTableLine(List amortizationTableLines) {
         super(amortizationTableLines.subList(1, amortizationTableLines.indexOf(amortizationTableLines.last()) + 1))
