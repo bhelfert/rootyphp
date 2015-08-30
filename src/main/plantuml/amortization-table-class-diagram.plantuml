@@ -22,16 +22,18 @@ AmortizationTableCalculator -right-> AmortizationTableConsolePrinter
 
 
 
-class AmortizationTableConsolePrinter{
+class AmortizationTableConsolePrinter {
     printAmortizationTable()
 }
 AmortizationTableConsolePrinter -> AmortizationTableOutputPreparer
+AmortizationTableConsolePrinter --> "*" AmortizationTableLine : amortizationTableLinesToPrint
 
 
 
 class AmortizationTableOutputPreparer {
     prepareTableLinesForOutput()
 }
+AmortizationTableOutputPreparer --> "*" AmortizationTableLine
 
 
 
