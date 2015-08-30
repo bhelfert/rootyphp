@@ -1,0 +1,95 @@
+@startuml
+
+' This is a PlantUML file that describes a UML Class Diagram textually.
+' See http://plantuml.com for more information.
+
+
+
+class CommandLineParser {
+    parseCommandLine()
+}
+CommandLineParser .down.> AmortizationTableParameters : << creates >>
+
+
+
+class AmortizationTableCalculator {
+    {static} main()
+    calculateAndPrintAmortizationTable()
+}
+AmortizationTableCalculator -left-> CommandLineParser
+AmortizationTableCalculator -down-> AmortizationTable
+AmortizationTableCalculator -right-> AmortizationTableConsolePrinter
+
+
+
+class AmortizationTableConsolePrinter{
+    printAmortizationTable()
+}
+AmortizationTableConsolePrinter -> AmortizationTableOutputPreparer
+
+
+
+class AmortizationTableOutputPreparer {
+    prepareTableLinesForOutput()
+}
+
+
+
+class AmortizationTable {
+    calculateTableLines()
+}
+AmortizationTable -down-> "*" AmortizationTableLine
+
+
+
+class AmortizationTableParameters {
+    loanAmountInEuro
+    debitInterestFactor
+    initialAmortizationFactor
+    fixedInterestRateInYears
+}
+
+
+
+abstract class AmortizationTableLine {
+    date
+    residualDebt
+    interest
+    amortization
+    rate
+}
+AmortizationTableLine -left-> AmortizationTableParameters
+
+
+
+abstract class SummatingAmortizationTableLine {
+}
+AmortizationTableLine <|- SummatingAmortizationTableLine
+SummatingAmortizationTableLine -> "*" AmortizationTableLine
+
+
+
+class PayoutAmortizationTableLine {
+}
+AmortizationTableLine <|-- PayoutAmortizationTableLine
+
+
+
+class MonthlyAmortizationTableLine {
+}
+AmortizationTableLine <|-- MonthlyAmortizationTableLine
+MonthlyAmortizationTableLine -up-> MonthlyAmortizationTableLine : previous
+
+
+
+class YearlyAmortizationTableLine {
+}
+SummatingAmortizationTableLine <|-- YearlyAmortizationTableLine
+
+
+
+class EndOfFixedInterestRateAmortizationTableLine {
+}
+SummatingAmortizationTableLine <|-- EndOfFixedInterestRateAmortizationTableLine
+
+@enduml

@@ -9,6 +9,7 @@ Amortization Table Calculator for Rootyphp
   - [How to build the project or a distribution](#how-to-build-the-project-or-a-distribution)
   - [Terminology / Vocabulary](#terminology--vocabulary)
   - [Project statistics](#project-statistics)
+  - [UML Class Diagram](#uml-class-diagram)
   - [Project dependencies](#project-dependencies)
 
 About this project
@@ -179,6 +180,12 @@ The current statistics are:
 | Totals               |    26 |  1090 |
 +----------------------+-------+-------+
 ```
+
+UML Class Diagram
+-----------------
+![Amortization Table Class Diagram](src/main/resources/images/amortization-table-class-diagram.png?raw=true)
+
+(Generated using [PlantUML](http://plantuml.com).)
 
 Project dependencies
 --------------------
