@@ -1,5 +1,7 @@
-package com.sevenlist.rootyphp.amortizationtable.model
+package com.sevenlist.rootyphp.amortizationtable.presentation
 
+import com.sevenlist.rootyphp.amortizationtable.model.AmortizationTableLine
+import com.sevenlist.rootyphp.amortizationtable.model.AmortizationTableParameters
 import groovy.transform.ToString
 
 import java.time.LocalDate

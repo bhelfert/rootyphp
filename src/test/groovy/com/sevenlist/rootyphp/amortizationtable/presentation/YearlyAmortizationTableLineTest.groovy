@@ -1,8 +1,8 @@
-package com.sevenlist.rootyphp.amortizationtable.model
+package com.sevenlist.rootyphp.amortizationtable.presentation
 
 import spock.lang.Specification
 
-import static TestData.*
+import static com.sevenlist.rootyphp.amortizationtable.model.TestData.*
 
 class YearlyAmortizationTableLineTest extends Specification {
 

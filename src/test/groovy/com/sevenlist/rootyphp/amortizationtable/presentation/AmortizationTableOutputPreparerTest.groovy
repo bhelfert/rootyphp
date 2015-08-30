@@ -2,10 +2,8 @@ package com.sevenlist.rootyphp.amortizationtable.presentation
 
 import com.sevenlist.rootyphp.amortizationtable.model.AmortizationTable
 import com.sevenlist.rootyphp.amortizationtable.model.AmortizationTableParameters
-import com.sevenlist.rootyphp.amortizationtable.model.EndOfFixedInterestRateAmortizationTableLine
 import com.sevenlist.rootyphp.amortizationtable.model.MonthlyAmortizationTableLine
 import com.sevenlist.rootyphp.amortizationtable.model.PayoutAmortizationTableLine
-import com.sevenlist.rootyphp.amortizationtable.model.YearlyAmortizationTableLine
 import spock.lang.Specification
 import spock.lang.Unroll
 

@@ -1,4 +1,4 @@
-package com.sevenlist.rootyphp.amortizationtable.model
+package com.sevenlist.rootyphp.amortizationtable.presentation
 
 import groovy.transform.ToString
 
