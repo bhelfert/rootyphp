@@ -79,8 +79,8 @@ AmortizationTableLine <|-- PayoutAmortizationTableLine
 
 class MonthlyAmortizationTableLine << (C,limegreen) >> {
 }
+MonthlyAmortizationTableLine -up-> "previous" AmortizationTableLine
 AmortizationTableLine <|-- MonthlyAmortizationTableLine
-MonthlyAmortizationTableLine -up-> MonthlyAmortizationTableLine : previous
 
 
 
