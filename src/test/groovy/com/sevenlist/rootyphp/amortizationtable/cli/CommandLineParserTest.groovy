@@ -12,10 +12,10 @@ class CommandLineParserTest extends Specification {
     def "CLI is defined only once"() {
         given:
         CliBuilder cliBuilderMock = GroovyMock()
+        CommandLineParser parserUsingMock = new CommandLineParser(cliBuilder: cliBuilderMock)
         String[] someArgs = []
 
         when:
-        CommandLineParser parserUsingMock = new CommandLineParser(cliBuilder: cliBuilderMock)
         parserUsingMock.parseCommandLine(someArgs)
         parserUsingMock.parseCommandLine(someArgs)
 
