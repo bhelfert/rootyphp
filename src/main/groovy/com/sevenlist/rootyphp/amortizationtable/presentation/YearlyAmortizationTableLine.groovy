@@ -1,21 +1,16 @@
 package com.sevenlist.rootyphp.amortizationtable.presentation
 
+import groovy.transform.InheritConstructors
 import groovy.transform.ToString
 
 import java.time.LocalDate
 
+@InheritConstructors
 @ToString(includeSuper = true)
 class YearlyAmortizationTableLine extends SummatingAmortizationTableLine {
 
-    YearlyAmortizationTableLine(List monthlyAmortizationTableLines) {
-        super(monthlyAmortizationTableLines)
-    }
-
     @Override
-    LocalDate getDate() {
-        if (!super.@date) {
-            date = amortizationTableLinesToSumUp.first().date
-        }
-        super.@date
+    protected LocalDate calculateDate() {
+        amortizationTableLinesToSumUp.first().date
     }
 }

@@ -4,8 +4,6 @@ import com.sevenlist.rootyphp.amortizationtable.model.AmortizationTableLine
 import com.sevenlist.rootyphp.amortizationtable.model.AmortizationTableParameters
 import groovy.transform.ToString
 
-import java.time.LocalDate
-
 @ToString(includeSuper = true, includeFields = true, includeNames = true)
 abstract class SummatingAmortizationTableLine extends AmortizationTableLine {
 
@@ -18,34 +16,24 @@ abstract class SummatingAmortizationTableLine extends AmortizationTableLine {
         this.amortizationTableLinesToSumUp = amortizationTableLinesToSumUp
     }
 
-    abstract LocalDate getDate()
-
-    BigDecimal getResidualDebt() {
-        if (!super.@residualDebt) {
-            residualDebt = amortizationTableLinesToSumUp.last().residualDebt
-        }
-        super.@residualDebt
+    @Override
+    protected BigDecimal calculateResidualDebt() {
+        amortizationTableLinesToSumUp.last().residualDebt
     }
 
-    BigDecimal getInterest() {
-        if (!super.@interest) {
-            interest = sumOf('interest')
-        }
-        super.@interest
+    @Override
+    protected BigDecimal calculateInterest() {
+        sumOf('interest')
     }
 
-    BigDecimal getAmortization() {
-        if (!super.@amortization) {
-            amortization = sumOf('amortization')
-        }
-        super.@amortization
+    @Override
+    protected BigDecimal calculateAmortization() {
+        sumOf('amortization')
     }
 
-    BigDecimal getRate() {
-        if (!super.@rate) {
-            rate = sumOf('rate')
-        }
-        super.@rate
+    @Override
+    protected BigDecimal calculateRate() {
+        sumOf('rate')
     }
 
     private BigDecimal sumOf(String fieldName) {

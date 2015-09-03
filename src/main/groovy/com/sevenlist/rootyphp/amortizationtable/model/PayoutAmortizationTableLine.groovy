@@ -12,17 +12,35 @@ class PayoutAmortizationTableLine extends AmortizationTableLine {
 
     PayoutAmortizationTableLine(AmortizationTableParameters parameters) {
         super(parameters)
-        calculateEntries()
+        calculateValues()
     }
 
-    /**
-     * Sets the date to the end of the current month.
-     * Sets the residual debt, the payout, and the rate to the negative loan amount.
-     * Sets the interest to zero.
-     */
-    private void calculateEntries() {
-        date = getEndOfMonth(LocalDate.now())
-        residualDebt = amortization = rate = loanAmountInEuro.negate()
-        interest = 0
+    private void calculateValues() {
+        date; residualDebt; interest; amortization; rate
+    }
+
+    @Override
+    protected LocalDate calculateDate() {
+        getEndOfMonth(LocalDate.now())
+    }
+
+    @Override
+    protected BigDecimal calculateResidualDebt() {
+        loanAmountInEuro.negate()
+    }
+
+    @Override
+    protected BigDecimal calculateInterest() {
+        BigDecimal.ZERO
+    }
+
+    @Override
+    protected BigDecimal calculateAmortization() {
+        loanAmountInEuro.negate()
+    }
+
+    @Override
+    protected BigDecimal calculateRate() {
+        loanAmountInEuro.negate()
     }
 }

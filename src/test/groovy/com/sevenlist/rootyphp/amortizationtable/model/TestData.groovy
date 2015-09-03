@@ -47,6 +47,31 @@ class TestData {
     static final List TWO_AMORTIZATION_TABLE_LINES = [LINE_ONE, LINE_TWO]
 
     static class SomeAmortizationTableLine extends AmortizationTableLine {
+
+        @Override
+        protected LocalDate calculateDate() {
+            throw new IllegalStateException('date has to be set as named parameter')
+        }
+
+        @Override
+        protected BigDecimal calculateResidualDebt() {
+            throw new IllegalStateException('residualDebt has to be set as named parameter')
+        }
+
+        @Override
+        protected BigDecimal calculateInterest() {
+            throw new IllegalStateException('interest has to be set as named parameter')
+        }
+
+        @Override
+        protected BigDecimal calculateAmortization() {
+            throw new IllegalStateException('amortization has to be set as named parameter')
+        }
+
+        @Override
+        protected BigDecimal calculateRate() {
+            throw new IllegalStateException('rate has to be set as named parameter')
+        }
     }
 
     private TestData() {

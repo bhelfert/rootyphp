@@ -16,7 +16,7 @@ class AmortizationTable {
 
         addFirstTableLine()
         addRemainingTableLines()
-        amortizationTableLines.last().calculateEntries()
+        amortizationTableLines.last().calculateValues()
 
         Collections.unmodifiableList(amortizationTableLines)
     }

@@ -23,80 +23,50 @@ class MonthlyAmortizationTableLine extends AmortizationTableLine {
         previousResidualDebt = previousLine.residualDebt
     }
 
-    void calculateEntries() {
+    void calculateValues() {
         residualDebt
     }
 
-    LocalDate getDate() {
-        if (!super.@date) {
-            date = calculateDate()
-        }
-        super.@date
-    }
-
-    private LocalDate calculateDate() {
+    @Override
+    protected LocalDate calculateDate() {
         def nextMonthDate = previousDate.plusMonths(1)
         getEndOfMonth(nextMonthDate)
-    }
-
-    BigDecimal getResidualDebt() {
-        if (!super.@residualDebt) {
-            residualDebt = calculateResidualDebt()
-        }
-        super.@residualDebt
     }
 
     /**
      * residual debt = (previous residual debt + amortization)
      */
-    private BigDecimal calculateResidualDebt() {
+    @Override
+    protected BigDecimal calculateResidualDebt() {
         previousResidualDebt + amortization
-    }
-
-    BigDecimal getInterest() {
-        if (!super.@interest) {
-            interest = calculateInterest()
-        }
-        super.@interest
     }
 
     /**
      * interest = -(previous residual debt * underperiodic interest)
      */
-    private BigDecimal calculateInterest() {
+    @Override
+    protected BigDecimal calculateInterest() {
         (previousResidualDebt * getUnderperiodicInterest()).negate()
-    }
-
-    BigDecimal getAmortization() {
-        if (!super.@amortization) {
-            amortization = calculateAmortization()
-        }
-        super.@amortization
     }
 
     /**
      * amortization = (rate - interest)
      */
-    private BigDecimal calculateAmortization() {
+    @Override
+    protected BigDecimal calculateAmortization() {
         rate - interest
-    }
-
-    BigDecimal getRate() {
-        if (!super.@rate) {
-            rate = calculateRate()
-        }
-        super.@rate
     }
 
     /**
      * rate = ((((debit interest / 100) + (initial amortization / 100)) / 12) * loan amount)
      */
-    private BigDecimal calculateRate() {
+    @Override
+    protected BigDecimal calculateRate() {
         def underperiodicInitialAmortization = calculateUnderperiodicValue(initialAmortizationFactor)
-        rate = (getUnderperiodicInterest() + underperiodicInitialAmortization) * loanAmountInEuro
+        (getUnderperiodicInterest() + underperiodicInitialAmortization) * loanAmountInEuro
     }
 
-    BigDecimal getUnderperiodicInterest() {
+    private BigDecimal getUnderperiodicInterest() {
         if (!this.@underperiodicInterest) {
             underperiodicInterest = calculateUnderperiodicInterest()
         }

@@ -11,12 +11,14 @@ import java.time.LocalDate
 @ToString(includeSuper = true)
 class EndOfFixedInterestRateAmortizationTableLine extends SummatingAmortizationTableLine {
 
+    private static final LocalDate NO_DATE = null
+
     EndOfFixedInterestRateAmortizationTableLine(List amortizationTableLines) {
         super(amortizationTableLines.subList(1, amortizationTableLines.indexOf(amortizationTableLines.last()) + 1))
     }
 
     @Override
-    LocalDate getDate() {
-        null
+    protected LocalDate calculateDate() {
+        NO_DATE
     }
 }
