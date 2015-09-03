@@ -174,10 +174,10 @@ The current statistics are:
 +----------------------+-------+-------+
 | Name                 | Files |  LOC  |
 +----------------------+-------+-------+
-| Groovy Sources       |    13 |   517 |
-| Groovy Test Sources  |    13 |   572 |
+| Groovy Sources       |    13 |   510 |
+| Groovy Test Sources  |    13 |   592 |
 +----------------------+-------+-------+
-| Totals               |    26 |  1089 |
+| Totals               |    26 |  1102 |
 +----------------------+-------+-------+
 ```
 
