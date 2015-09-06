@@ -10,7 +10,7 @@ class EndToEndTest extends Specification {
         StringBuilder output = new StringBuilder()
         SystemOutputInterceptor soutInterceptor = new SystemOutputInterceptor({
             output.append(it)
-            false
+            true
         })
 
         String[] args = [
@@ -26,8 +26,7 @@ class EndToEndTest extends Specification {
         soutInterceptor.stop()
 
         then:
-        def outputAsString = output.toString()
-        outputAsString.contains("""
+        output.toString() == ("""
 Tilgungsplan für
 * Darlehensbetrag:     200.000,00 €
 * Sollzins:            1,43%
@@ -77,7 +76,7 @@ Tilgungsplan für
 |       30.09.2030 | -116.404,24 € |    139,33 € |                     515,67 € |      655,00 € |
 | Zinsbindungsende | -116.404,24 € | 34.304,24 € |                  83.595,76 € |  117.900,00 € |
 +------------------+---------------+-------------+------------------------------+---------------+
+
 """)
-        println outputAsString
     }
 }
