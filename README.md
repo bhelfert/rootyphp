@@ -31,7 +31,7 @@ To get the precision needed for financial calculations, [BigDecimal](https://doc
 objects are used. As Rootyphp's task description contains some rounding errors in its amortization table, the values calculated
 by this project will differ a bit due to having less rounding errors.
 
-If you have any questions please do not hesitate to contact me via <sevenlist@web.de>.
+If you have any questions please do not hesitate to contact me via <bastian.helfert@gmail.com.
 
 How to run/use the application
 ------------------------------

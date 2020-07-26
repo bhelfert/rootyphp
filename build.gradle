@@ -12,7 +12,7 @@ apply plugin: 'groovy'
 
 apply plugin: 'application'
 applicationName = 'amortizationTableCalculator'
-mainClassName = 'com.sevenlist.rootyphp.amortizationtable.AmortizationTableCalculator'
+mainClassName = 'de.bhelfert.rootyphp.amortizationtable.AmortizationTableCalculator'
 
 apply plugin: 'org.kordamp.gradle.stats'
 
